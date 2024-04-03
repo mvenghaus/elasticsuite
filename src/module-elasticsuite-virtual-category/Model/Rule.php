@@ -225,6 +225,8 @@ class Rule extends \Smile\ElasticsuiteCatalogRule\Model\Rule implements VirtualR
      */
     public function getSearchQueriesByChildren(CategoryInterface $rootCategory): array
     {
+        return [];
+
         $queries     = [];
         $childrenIds = $rootCategory->getResource()->getChildren($rootCategory, false);
 
@@ -306,9 +308,6 @@ class Rule extends \Smile\ElasticsuiteCatalogRule\Model\Rule implements VirtualR
                 $query = $this->getVirtualCategoryQuery($category, $excludedCategories);
             } elseif ($category->getId() && $category->getIsActive()) {
                 $query = $this->getStandardCategoryQuery($category, $excludedCategories);
-            }
-            if ($query && $category->hasChildren()) {
-                $query = $this->addChildrenQueries($query, $category, $excludedCategories);
             }
         }
 

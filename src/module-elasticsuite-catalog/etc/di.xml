@@ -303,7 +303,7 @@
     </type>
 
     <preference for="Smile\ElasticsuiteCatalog\Model\ResourceModel\Product\Indexer\Fulltext\Datasource\InventoryDataInterface"
-                type="Smile\ElasticsuiteCatalog\Model\ResourceModel\Product\Indexer\Fulltext\Datasource\InventoryData" />
+                type="Smile\ElasticsuiteCatalog\Model\ResourceModel\Product\Indexer\Fulltext\Datasource\Deprecation\InventoryData" />
 
     <virtualType name="Smile\ElasticsuiteCatalog\Search\Request\Product\Coverage\Builder"
         type="\Smile\ElasticsuiteCore\Search\Request\Builder">

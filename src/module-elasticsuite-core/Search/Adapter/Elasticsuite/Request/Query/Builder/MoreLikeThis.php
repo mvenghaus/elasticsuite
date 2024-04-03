@@ -43,7 +43,7 @@ class MoreLikeThis implements BuilderInterface
             'boost_terms'          => $query->getBoostTerms(),
             'min_term_freq'        => $query->getMinTermFreq(),
             'min_doc_freq'         => $query->getMinDocFreq(),
-            'max_doc_freq'         => $query->getMaxDocFreq(),
+            'max_doc_freq'         => null,
             'max_query_terms'      => $query->getMaxQueryTerms(),
             'min_word_length'      => $query->getMinWordLength(),
             'max_word_length'      => $query->getMaxWordLength(),
