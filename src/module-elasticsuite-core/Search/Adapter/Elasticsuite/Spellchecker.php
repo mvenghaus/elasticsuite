@@ -259,6 +259,9 @@ class Spellchecker implements SpellcheckerInterface
 
         if (is_array($termVectors) && isset($termVectors['docs'])) {
             foreach ($termVectors['docs'] as $termVector) {
+                if (!is_array($termVector['term_vectors'])) {
+                    continue;
+                }
                 foreach ($termVector['term_vectors'] as $propertyName => $fieldData) {
                     $analyzer = $this->getAnalyzer($propertyName);
                     if (in_array($analyzer, $analyzers)) {
